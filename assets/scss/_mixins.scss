@@ -1,0 +1,7 @@
+@mixin primaryBtn($clr, $bgClr) {
+  padding: 30px 44px;
+  background-color: $bgClr;
+  color: $clr;
+  border-radius: 5px;
+  transition: color 0.4s linear;
+}

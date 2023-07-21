@@ -1,0 +1,59 @@
+.hero {
+  padding-top: 100px;
+  .container {
+    .row {
+      justify-content: space-between;
+      align-items: center;
+      .leftSide {
+        flex: 0 0 58%;
+        .title {
+          font-size: 65px;
+          font-weight: 700;
+          line-height: 1.2;
+          margin-bottom: 40px;
+          color: $darkBlueClr;
+        }
+        .sectionInfo {
+          margin-bottom: 54px;
+          padding-right: 155px;
+          line-height: 30px;
+          color: $grayClr;
+        }
+        .heroBtn {
+          padding: 19px 56px;
+          z-index: 1;
+          border-radius: 5px;
+          color: $whiteClr;
+          background-color: $lightPinkClr;
+          position: relative;
+          transition: color 0.4s linear;
+          &:hover {
+            span {
+              width: 100%;
+            }
+          }
+
+          span {
+            height: 100%;
+            position: absolute;
+            display: inline-block;
+            border-radius: 5px;
+            top: 0;
+            left: 0;
+            width: 0;
+            z-index: -1;
+            background-color: $pinkClr;
+            transition: all 0.5s cubic-bezier(0.5, 1.6, 0.4, 0.7);
+          }
+        }
+      }
+      .rightSide {
+        width: 40%;
+        img {
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
