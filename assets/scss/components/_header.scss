@@ -1,6 +1,7 @@
 .header {
   box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
   position: fixed;
+  z-index: 99999;
   width: 100%;
   .container {
     .row {
@@ -25,20 +26,21 @@
           .navItem {
             a {
               display: inline-block;
-              padding: 39px 19px;
+              padding: 26px 20px;
               transition: all 0.3s ease-out;
               font-size: 16px;
               position: relative;
               color: $blackClr;
-
-              &:hover {
+            }
+            &:hover {
+              a {
                 color: $lightPinkClr;
+              }
 
-                + .dropDown {
-                  visibility: visible;
-                  opacity: 1;
-                  top: 100%;
-                }
+              .dropDown {
+                visibility: visible;
+                opacity: 1;
+                top: 100%;
               }
             }
             .dropDown {
@@ -55,6 +57,11 @@
                 a {
                   padding: 6px 10px;
                   font-size: 14px;
+                  color: $blackClr;
+
+                  &:hover {
+                    color: $lightPinkClr;
+                  }
                 }
               }
             }

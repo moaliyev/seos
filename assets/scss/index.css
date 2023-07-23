@@ -9,7 +9,7 @@
 }
 
 main {
-  padding-top: 102px;
+  padding-top: 76px;
 }
 
 .container {
@@ -50,6 +50,7 @@ main {
 .header {
   box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
   position: fixed;
+  z-index: 99999;
   width: 100%;
 }
 .header .container .row {
@@ -77,16 +78,16 @@ main {
 }
 .header .container .row .navBar .navList .navItem a {
   display: inline-block;
-  padding: 39px 19px;
+  padding: 26px 20px;
   transition: all 0.3s ease-out;
   font-size: 16px;
   position: relative;
   color: #002e5b;
 }
-.header .container .row .navBar .navList .navItem a:hover {
+.header .container .row .navBar .navList .navItem:hover a {
   color: #ff5c97;
 }
-.header .container .row .navBar .navList .navItem a:hover + .dropDown {
+.header .container .row .navBar .navList .navItem:hover .dropDown {
   visibility: visible;
   opacity: 1;
   top: 100%;
@@ -105,6 +106,10 @@ main {
 .header .container .row .navBar .navList .navItem .dropDown .dropItem a {
   padding: 6px 10px;
   font-size: 14px;
+  color: #002e5b;
+}
+.header .container .row .navBar .navList .navItem .dropDown .dropItem a:hover {
+  color: #ff5c97;
 }
 .header .container .row .navBar .btn {
   color: #fff;
@@ -194,15 +199,22 @@ main {
     padding-inline: 10px;
   }
 }
+/* ------------------------------- START HERO ------------------------------- */
 .hero {
-  padding-top: 100px;
+  position: relative;
+  background-image: url(../images/hero_bg.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: calc(100vh - 76px);
+  width: 100%;
 }
 .hero .container .row {
   justify-content: space-between;
   align-items: center;
 }
 .hero .container .row .leftSide {
-  flex: 0 0 58%;
+  flex: 0 0 53%;
 }
 .hero .container .row .leftSide .title {
   font-size: 65px;
@@ -242,10 +254,63 @@ main {
   transition: all 0.5s cubic-bezier(0.5, 1.6, 0.4, 0.7);
 }
 .hero .container .row .rightSide {
-  width: 40%;
+  flex: 0 0 fit-content;
 }
 .hero .container .row .rightSide img {
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-}/*# sourceMappingURL=index.css.map */
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  background-image: url(../images/plus.png);
+  left: 700px;
+  top: 200px;
+  -webkit-animation: plus 2s ease-out infinite;
+          animation: plus 2s ease-out infinite;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  background-image: url(../images/plus.png);
+  left: 640px;
+  top: 700px;
+  -webkit-animation: plus 2s ease-out infinite;
+          animation: plus 2s ease-out infinite;
+}
+
+@-webkit-keyframes plus {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes plus {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* ------------------------------- END HEADER ------------------------------- *//*# sourceMappingURL=index.css.map */
