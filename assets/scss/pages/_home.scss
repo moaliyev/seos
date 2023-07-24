@@ -1,6 +1,5 @@
 /* ------------------------------- START HERO ------------------------------- */
 .hero {
-  position: relative;
   background-image: url(../images/hero_bg.png);
   background-repeat: no-repeat;
   background-position: center center;
@@ -12,7 +11,8 @@
       justify-content: space-between;
       align-items: center;
       .leftSide {
-        flex: 0 0 53%;
+        position: relative;
+        flex: 0 0 58%;
         .title {
           font-size: 65px;
           font-weight: 700;
@@ -53,6 +53,32 @@
             transition: all 0.5s cubic-bezier(0.5, 1.6, 0.4, 0.7);
           }
         }
+        &::after {
+          content: "";
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: contain;
+          background-image: url(../images/plus.png);
+          left: 339px;
+          top: -70px;
+          animation: plus 2s ease-out infinite;
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: contain;
+          background-image: url(../images/plus.png);
+          left: 285px;
+          bottom: -79px;
+          animation: plus 2s ease-out infinite;
+        }
       }
       .rightSide {
         flex: 0 0 fit-content;
@@ -62,32 +88,6 @@
         }
       }
     }
-  }
-  &::after {
-    content: "";
-    position: absolute;
-    width: 18px;
-    height: 15px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    background-image: url(../images/plus.png);
-    left: 700px;
-    top: 200px;
-    animation: plus 2s ease-out infinite;
-  }
-  &::before {
-    content: "";
-    position: absolute;
-    width: 18px;
-    height: 15px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    background-image: url(../images/plus.png);
-    left: 640px;
-    top: 700px;
-    animation: plus 2s ease-out infinite;
   }
 }
 
@@ -100,6 +100,43 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@media (max-width: 1350px) {
+  .hero {
+    .container {
+      .row {
+        .rightSide {
+          flex: 0 0 40%;
+          img {
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero {
+    .container {
+      .row {
+        .leftSide {
+          .title {
+            font-size: 55px;
+          }
+        }
+        .rightSide {
+          flex: 0 0 40%;
+          img {
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
   }
 }
 

@@ -3,6 +3,7 @@
   position: fixed;
   z-index: 99999;
   width: 100%;
+  background-color: $whiteClr;
   .container {
     .row {
       align-items: center;
@@ -15,6 +16,9 @@
           height: 100%;
           object-fit: cover;
         }
+      }
+      input {
+        display: none;
       }
       .navBar {
         display: flex;
@@ -100,6 +104,7 @@
       }
       .mobileMenu {
         display: none;
+        cursor: pointer;
       }
     }
   }
@@ -138,14 +143,45 @@
     padding: 12px 0;
     .container {
       .row {
+        position: relative;
         .navBar {
-          display: none;
+          position: absolute;
+          visibility: hidden;
+          opacity: 0;
+          padding: 0;
+          display: flex;
+          z-index: -99;
+          top: -100%;
+          width: 100%;
+          transition: all 0.4s ease;
+          background-color: $whiteClr;
+          .navList {
+            width: 100%;
+            flex-direction: column;
+            .navItem {
+              a {
+                width: 100%;
+                display: inline-block;
+                padding: 10px 19px;
+                font-size: 14px;
+              }
+            }
+          }
+          .btn {
+            display: none;
+          }
+        }
+        input:checked + .navBar {
+          top: 100%;
+          visibility: visible;
+          opacity: 1;
         }
         .mobileMenu {
           height: 100%;
           display: inline-block;
           width: 45px;
           label {
+            cursor: pointer;
             height: 100%;
             width: 100%;
             display: flex;
