@@ -8,8 +8,9 @@
   width: 100%;
   .container {
     .row {
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
+      position: relative;
       .leftSide {
         position: relative;
         flex: 0 0 58%;
@@ -21,19 +22,25 @@
           color: $darkBlueClr;
         }
         .sectionInfo {
-          margin-bottom: 54px;
+          margin-bottom: 92px;
           padding-right: 155px;
           line-height: 30px;
           color: $grayClr;
         }
         .heroBtn {
-          padding: 19px 56px;
+          position: relative;
           z-index: 1;
+          transition: color 0.4s linear;
+          padding: 19px 56px;
           border-radius: 5px;
           color: $whiteClr;
           background-color: $lightPinkClr;
-          position: relative;
-          transition: color 0.4s linear;
+          p {
+            position: relative;
+            display: inline-block;
+            z-index: 2;
+          }
+
           &:hover {
             span {
               width: 100%;
@@ -42,13 +49,13 @@
 
           span {
             height: 100%;
+            z-index: 2;
             position: absolute;
             display: inline-block;
             border-radius: 5px;
             top: 0;
             left: 0;
             width: 0;
-            z-index: -1;
             background-color: $pinkClr;
             transition: all 0.5s cubic-bezier(0.5, 1.6, 0.4, 0.7);
           }
@@ -76,14 +83,14 @@
           background-size: contain;
           background-image: url(../images/plus.png);
           left: 285px;
-          bottom: -79px;
+          top: 400px;
           animation: plus 2s ease-out infinite;
         }
       }
       .rightSide {
         flex: 0 0 fit-content;
         img {
-          width: 100%;
+          height: 100%;
           object-fit: cover;
         }
       }
@@ -103,10 +110,12 @@
   }
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1450px) {
   .hero {
+    padding-top: 80px;
     .container {
       .row {
+        align-items: flex-start;
         .rightSide {
           flex: 0 0 40%;
           img {
@@ -123,6 +132,7 @@
   .hero {
     .container {
       .row {
+        align-items: center;
         .leftSide {
           .title {
             font-size: 55px;
@@ -140,4 +150,227 @@
   }
 }
 
+@media (max-width: 992px) {
+  .hero {
+    height: 100%;
+    .container {
+      .row {
+        align-items: flex-start;
+        .leftSide {
+          flex-basis: 100%;
+          &::before {
+            top: 360px;
+          }
+          &::after {
+            top: -30px;
+          }
+        }
+        .rightSide {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    .container {
+      .row {
+        .leftSide {
+          .title {
+            font-size: 29px;
+            line-height: 1.4;
+          }
+          .sectionInfo {
+            padding: 0;
+          }
+          &::before {
+            top: 300px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .hero {
+    .container {
+      .row {
+        .leftSide {
+          &::after {
+            left: 250px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .hero {
+    .container {
+      .row {
+        .leftSide {
+          &::after {
+            display: none;
+          }
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
 /* ------------------------------- END HEADER ------------------------------- */
+
+/* ----------------------------- START SERVICES ----------------------------- */
+.services {
+  width: 100%;
+  height: 100%;
+  .container {
+    .row {
+      flex-direction: column;
+      .title {
+        line-height: 1.3;
+        font-size: 50px;
+        color: $darkBlueClr;
+        text-align: center;
+        width: 770px;
+        margin: 0 auto 66px auto;
+      }
+      .cardBox {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: space-between;
+        .card {
+          flex-direction: column;
+          display: flex;
+          align-items: center;
+          padding: 0 15px;
+          flex: 0 0 30%;
+          margin-bottom: 30px;
+          transition: all 0.3s ease;
+          padding: 56px 40px 69px;
+          border-radius: 6px;
+          .cardImage {
+            width: 73px;
+            margin-bottom: 20px;
+            img {
+              width: 100%;
+            }
+          }
+          .cardTitle {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 23px;
+            color: $darkBlueClr;
+          }
+
+          .cardInfo {
+            margin-bottom: 40px;
+            color: $grayClr;
+            line-height: 30px;
+            text-align: center;
+          }
+          a {
+            display: flex;
+            align-items: center;
+            font-size: 13px;
+            color: $lightGrayClr;
+            transition: all 0.3s ease-out;
+            font-weight: 500;
+            i {
+              transition: all 0.3s ease-out;
+              padding: 5px 6px;
+              border-radius: 50%;
+              margin-right: 7px;
+              background: $lightGrayClr;
+              width: 24px;
+              height: 24px;
+              color: $whiteClr;
+              display: inline-block;
+            }
+          }
+          &:hover {
+            box-shadow: 0px 10px 30px 0px rgb(133 66 189 / 10%);
+            a {
+              color: $purpleClr;
+              i {
+                background-color: $purpleClr;
+              }
+            }
+          }
+          &:nth-child(2) {
+            box-shadow: 0px 10px 30px 0px rgb(133 66 189 / 10%);
+            a {
+              color: $purpleClr;
+              i {
+                background-color: $purpleClr;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .services {
+    .container {
+      .row {
+        .title {
+          width: 610px;
+        }
+        .cardBox {
+          .card {
+            .cardTitle {
+              font-size: 21px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .services {
+    padding-top: 160px;
+    .container {
+      .row {
+        .title {
+          font-size: 45px;
+        }
+        .cardBox {
+          .card {
+            flex: 0 0 48%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    .container {
+      .row {
+        .title {
+          font-size: 23px;
+          width: auto;
+        }
+        .cardBox {
+          .card {
+            flex: 0 0 100%;
+          }
+        }
+      }
+    }
+  }
+}
+/* ------------------------------ END SERVICES ------------------------------ */

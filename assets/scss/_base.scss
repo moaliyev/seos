@@ -9,12 +9,12 @@
   font-family: "Poppins", sans-serif;
 }
 
-body {
-  overflow: hidden;
-}
-
 main {
   padding-top: 76px;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 .container {
@@ -53,5 +53,6 @@ main {
 @media (max-width: 576px) {
   .container {
     width: 100%;
+    padding: 0 15px;
   }
 }
