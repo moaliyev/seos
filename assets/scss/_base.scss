@@ -21,6 +21,7 @@ body {
   height: 100%;
   width: 1200px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .row {
@@ -53,6 +54,5 @@ body {
 @media (max-width: 576px) {
   .container {
     width: 100%;
-    padding: 0 15px;
   }
 }

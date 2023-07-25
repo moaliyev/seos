@@ -1,7 +1,35 @@
 @mixin primaryBtn($clr, $bgClr) {
-  padding: 30px 44px;
   background-color: $bgClr;
-  color: $clr;
-  border-radius: 5px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
   transition: color 0.4s linear;
+  padding: 30px 44px;
+  min-width: 200px;
+  text-align: center;
+  line-height: 0;
+  border-radius: 5px;
+  color: $clr;
+  &:hover {
+    color: $whiteClr;
+    &::before {
+      transform: scaleX(1);
+      z-index: -1;
+    }
+  }
+  &::before {
+    background: $pinkClr;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    border-radius: 5px;
+    transform-origin: 0 0;
+    transition: transform 0.5s;
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+    transform: scaleX(0);
+  }
 }
