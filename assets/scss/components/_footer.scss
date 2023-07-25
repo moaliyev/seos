@@ -1,0 +1,199 @@
+.footer {
+  width: 100%;
+  height: 100%;
+  padding-top: 200px;
+  padding-bottom: 15px;
+  background-image: url(../images/footer_bg.png);
+  .container {
+    .row {
+      justify-content: space-between;
+      .about {
+        padding: 0 15px;
+        margin-bottom: 50px;
+        flex: 0 0 25%;
+        .logo {
+          margin-bottom: 30px;
+        }
+        .address {
+          margin-bottom: 10px;
+          line-height: 1.8;
+          color: $grayClr;
+        }
+        .mail {
+          color: $grayClr;
+          display: inline-block;
+          margin-bottom: 50px;
+          line-height: 1.8;
+        }
+        .social {
+          display: flex;
+          .socialMedia {
+            width: 40px;
+            height: 40px;
+            font-size: 14px;
+            border: 1px solid $footerGrayBgClr;
+            background: $footerGrayBgClr;
+            text-align: center;
+            color: $footerGrayClr;
+            margin-right: 5px;
+            transition: all 0.4s ease-out;
+            i {
+              padding-top: 12px;
+            }
+          }
+        }
+      }
+      .quickLinks {
+        flex: 0 0 16.7%;
+        padding: 0 15px;
+        margin-bottom: 50px;
+        h4 {
+          color: $footerHeaderClr;
+          font-size: 20px;
+          margin-bottom: 48px;
+          font-weight: 500;
+        }
+        .quickLinkList {
+          li {
+            margin-bottom: 15px;
+            a {
+              color: $footerLinkClr;
+              font-weight: 300;
+              transition: all 0.3s ease-out;
+              &:hover {
+                color: $lightPinkClr;
+                padding-left: 5px;
+              }
+            }
+          }
+        }
+      }
+      .support {
+        flex: 0 0 16.7%;
+        padding: 0 15px;
+        margin-bottom: 50px;
+
+        h4 {
+          color: $footerHeaderClr;
+          font-size: 20px;
+          margin-bottom: 48px;
+          font-weight: 500;
+        }
+        .supportLinks {
+          li {
+            margin-bottom: 15px;
+
+            a {
+              color: $footerLinkClr;
+              font-weight: 300;
+              transition: all 0.3s ease-out;
+              &:hover {
+                color: $lightPinkClr;
+                padding-left: 5px;
+              }
+            }
+          }
+        }
+      }
+      .coreFeatures {
+        flex: 0 0 25%;
+        padding: 0 15px;
+        margin-bottom: 50px;
+
+        h4 {
+          color: $footerHeaderClr;
+          font-size: 20px;
+          margin-bottom: 48px;
+          font-weight: 500;
+        }
+        .featureLinks {
+          li {
+            margin-bottom: 15px;
+            a {
+              color: $footerLinkClr;
+              font-weight: 300;
+              transition: all 0.3s ease-out;
+              &:hover {
+                color: $lightPinkClr;
+                padding-left: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .footer {
+    padding-top: 70px;
+    padding-bottom: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  .footer {
+    padding-top: 70px;
+    padding-bottom: 0px;
+    .container {
+      .row {
+        flex-wrap: wrap;
+        .about {
+          flex: 0 0 33.3%;
+        }
+        .quickLinks {
+          flex: 0 0 33.3%;
+        }
+        .support {
+          flex: 0 0 33.3%;
+        }
+        .coreFeatures {
+          flex: 0 0 33.3%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    .container {
+      .row {
+        .about {
+          flex: 0 0 66.7%;
+        }
+        .quickLinks {
+          flex: 0 0 41.7%;
+        }
+        .support {
+          flex: 0 0 58.3%;
+        }
+        .coreFeatures {
+          flex: 0 0 42%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    .container {
+      .row {
+        .about {
+          flex: 0 0 100%;
+        }
+        .quickLinks {
+          flex: 0 0 100%;
+        }
+        .support {
+          flex: 0 0 100%;
+        }
+        .coreFeatures {
+          flex: 0 0 100%;
+        }
+      }
+    }
+  }
+}

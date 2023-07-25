@@ -734,13 +734,11 @@
   }
   .cardBox {
     display: flex;
-    margin-right: -15px;
-    margin-left: -15px;
+    gap: 30px;
     justify-content: space-between;
     .card {
-      flex: 0 0 25%;
+      flex: 0 0 23%;
       margin-bottom: 30px;
-      padding: 0 15px;
       position: relative;
       img {
         width: 100%;
@@ -796,9 +794,10 @@
       width: 705px;
     }
     .cardBox {
+      gap: 15px;
       flex-wrap: wrap;
       .card {
-        flex: 0 0 33%;
+        flex: 0 0 32%;
         .cardContent {
           padding: 14px 10px 1px 32px;
         }

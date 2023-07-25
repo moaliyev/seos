@@ -237,6 +237,177 @@ body {
     padding-inline: 10px;
   }
 }
+.footer {
+  width: 100%;
+  height: 100%;
+  padding-top: 200px;
+  padding-bottom: 15px;
+  background-image: url(../images/footer_bg.png);
+}
+.footer .container .row {
+  justify-content: space-between;
+}
+.footer .container .row .about {
+  padding: 0 15px;
+  margin-bottom: 50px;
+  flex: 0 0 25%;
+}
+.footer .container .row .about .logo {
+  margin-bottom: 30px;
+}
+.footer .container .row .about .address {
+  margin-bottom: 10px;
+  line-height: 1.8;
+  color: #707b8e;
+}
+.footer .container .row .about .mail {
+  color: #707b8e;
+  display: inline-block;
+  margin-bottom: 50px;
+  line-height: 1.8;
+}
+.footer .container .row .about .social {
+  display: flex;
+}
+.footer .container .row .about .social .socialMedia {
+  width: 40px;
+  height: 40px;
+  font-size: 14px;
+  border: 1px solid #fafafa;
+  background: #fafafa;
+  text-align: center;
+  color: #949eb2;
+  margin-right: 5px;
+  transition: all 0.4s ease-out;
+}
+.footer .container .row .about .social .socialMedia i {
+  padding-top: 12px;
+}
+.footer .container .row .quickLinks {
+  flex: 0 0 16.7%;
+  padding: 0 15px;
+  margin-bottom: 50px;
+}
+.footer .container .row .quickLinks h4 {
+  color: #012f5f;
+  font-size: 20px;
+  margin-bottom: 48px;
+  font-weight: 500;
+}
+.footer .container .row .quickLinks .quickLinkList li {
+  margin-bottom: 15px;
+}
+.footer .container .row .quickLinks .quickLinkList li a {
+  color: #868c98;
+  font-weight: 300;
+  transition: all 0.3s ease-out;
+}
+.footer .container .row .quickLinks .quickLinkList li a:hover {
+  color: #ff5c97;
+  padding-left: 5px;
+}
+.footer .container .row .support {
+  flex: 0 0 16.7%;
+  padding: 0 15px;
+  margin-bottom: 50px;
+}
+.footer .container .row .support h4 {
+  color: #012f5f;
+  font-size: 20px;
+  margin-bottom: 48px;
+  font-weight: 500;
+}
+.footer .container .row .support .supportLinks li {
+  margin-bottom: 15px;
+}
+.footer .container .row .support .supportLinks li a {
+  color: #868c98;
+  font-weight: 300;
+  transition: all 0.3s ease-out;
+}
+.footer .container .row .support .supportLinks li a:hover {
+  color: #ff5c97;
+  padding-left: 5px;
+}
+.footer .container .row .coreFeatures {
+  flex: 0 0 25%;
+  padding: 0 15px;
+  margin-bottom: 50px;
+}
+.footer .container .row .coreFeatures h4 {
+  color: #012f5f;
+  font-size: 20px;
+  margin-bottom: 48px;
+  font-weight: 500;
+}
+.footer .container .row .coreFeatures .featureLinks li {
+  margin-bottom: 15px;
+}
+.footer .container .row .coreFeatures .featureLinks li a {
+  color: #868c98;
+  font-weight: 300;
+  transition: all 0.3s ease-out;
+}
+.footer .container .row .coreFeatures .featureLinks li a:hover {
+  color: #ff5c97;
+  padding-left: 5px;
+}
+
+@media (max-width: 1200px) {
+  .footer {
+    padding-top: 70px;
+    padding-bottom: 15px;
+  }
+}
+@media (max-width: 992px) {
+  .footer {
+    padding-top: 70px;
+    padding-bottom: 0px;
+  }
+  .footer .container .row {
+    flex-wrap: wrap;
+  }
+  .footer .container .row .about {
+    flex: 0 0 33.3%;
+  }
+  .footer .container .row .quickLinks {
+    flex: 0 0 33.3%;
+  }
+  .footer .container .row .support {
+    flex: 0 0 33.3%;
+  }
+  .footer .container .row .coreFeatures {
+    flex: 0 0 33.3%;
+  }
+}
+@media (max-width: 768px) {
+  .footer .container .row .about {
+    flex: 0 0 66.7%;
+  }
+  .footer .container .row .quickLinks {
+    flex: 0 0 41.7%;
+  }
+  .footer .container .row .support {
+    flex: 0 0 58.3%;
+  }
+  .footer .container .row .coreFeatures {
+    flex: 0 0 42%;
+  }
+}
+@media (max-width: 576px) {
+  .footer .container .row .about {
+    flex: 0 0 100%;
+  }
+  .footer .container .row .quickLinks {
+    flex: 0 0 100%;
+  }
+  .footer .container .row .support {
+    flex: 0 0 100%;
+  }
+  .footer .container .row .coreFeatures {
+    flex: 0 0 100%;
+  }
+}
 /* ------------------------------- START HERO ------------------------------- */
 .hero {
   background-image: url(../images/hero_bg.png);
@@ -888,14 +1059,12 @@ body {
 }
 .projects .cardBox {
   display: flex;
-  margin-right: -15px;
-  margin-left: -15px;
+  gap: 30px;
   justify-content: space-between;
 }
 .projects .cardBox .card {
-  flex: 0 0 25%;
+  flex: 0 0 23%;
   margin-bottom: 30px;
-  padding: 0 15px;
   position: relative;
 }
 .projects .cardBox .card img {
@@ -944,10 +1113,11 @@ body {
     width: 705px;
   }
   .projects .cardBox {
+    gap: 15px;
     flex-wrap: wrap;
   }
   .projects .cardBox .card {
-    flex: 0 0 33%;
+    flex: 0 0 32%;
   }
   .projects .cardBox .card .cardContent {
     padding: 14px 10px 1px 32px;
