@@ -52,6 +52,7 @@
               top: 120%;
               position: absolute;
               background-color: $whiteClr;
+              z-index: 1;
               box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.05);
               padding: 17px 60px 17px 5px;
               transition: all 0.3s ease-out;
@@ -156,6 +157,7 @@
             width: 100%;
             flex-direction: column;
             .navItem {
+              position: relative;
               a {
                 width: 100%;
                 display: inline-block;

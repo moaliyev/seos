@@ -7,7 +7,7 @@
   .container {
     .row {
       justify-content: space-between;
-      .about {
+      .footerAbout {
         padding: 0 15px;
         margin-bottom: 50px;
         flex: 0 0 25%;
@@ -139,7 +139,7 @@
     .container {
       .row {
         flex-wrap: wrap;
-        .about {
+        .footerAbout {
           flex: 0 0 33.3%;
         }
         .quickLinks {
@@ -160,7 +160,7 @@
   .footer {
     .container {
       .row {
-        .about {
+        .footerAbout {
           flex: 0 0 66.7%;
         }
         .quickLinks {
@@ -181,7 +181,7 @@
   .footer {
     .container {
       .row {
-        .about {
+        .footerAbout {
           flex: 0 0 100%;
         }
         .quickLinks {
@@ -196,4 +196,21 @@
       }
     }
   }
+}
+
+.scrollUp {
+  position: fixed;
+  background: $lightPinkClr;
+  height: 50px;
+  width: 50px;
+  right: 31px;
+  bottom: 18px;
+  color: $whiteClr;
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+  border-radius: 50%;
+  line-height: 48px;
+  border: 2px solid transparent;
+  z-index: 99;
 }

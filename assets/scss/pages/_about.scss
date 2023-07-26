@@ -1,1 +1,139 @@
-    
+@import "../mixins";
+
+/* ------------------------------- START HERO ------------------------------- */
+.aboutHero {
+  height: calc(100vh - 76px);
+  position: relative;
+  width: 100%;
+  .container {
+    .row {
+      align-items: center;
+      justify-content: center;
+      .leftSide {
+        flex: 0 0 48%;
+        img {
+          width: 100%;
+        }
+      }
+      .rightSide {
+        padding: 0 15px;
+        flex: 0 0 58%;
+        .title {
+          font-size: 65px;
+          font-weight: 700;
+          color: $darkBlueClr;
+          margin-bottom: 40px;
+          line-height: 1.2;
+        }
+        .info {
+          margin-bottom: 54px;
+          padding-right: 155px;
+          color: $grayClr;
+          line-height: 30px;
+        }
+        .btn {
+          @include primaryBtn($whiteClr, $lightPinkClr);
+        }
+      }
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background-image: url(../images/about_shape1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    // background-position: center center;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 90%;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -5%;
+    right: -15%;
+    background-image: url(../images/about-sharpe2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30%;
+    height: 55%;
+  }
+}
+
+@media (max-width: 1260px) {
+  .aboutHero {
+    .container {
+      .row {
+        .leftSide {
+          flex: 0 0 45%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .aboutHero {
+    .container {
+      .row {
+        justify-content: flex-start;
+        .leftSide {
+          display: none;
+        }
+        .rightSide {
+          flex: 0 0 60%;
+          .title {
+            font-size: 55px;
+          }
+        }
+      }
+    }
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .aboutHero {
+    height: 100%;
+    margin-bottom: 150px;
+    .container {
+      .row {
+        margin: 20px 0;
+        align-items: flex-start;
+        justify-content: flex-start;
+        .rightSide {
+          flex: 0 0 90%;
+          .info {
+            padding-right: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutHero {
+    margin-bottom: 80px;
+    .container {
+      .row {
+        justify-content: center;
+        .rightSide {
+          flex: 0 0 100%;
+          .title {
+            font-size: 29px;
+            line-height: 1.4;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* -------------------------------- END HERO -------------------------------- */

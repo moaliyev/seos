@@ -1,0 +1,201 @@
+/* ------------------------------ START CONTACT ----------------------------- */
+.contact {
+  width: 100%;
+  height: 100%;
+  padding-top: 194px;
+  padding-bottom: 50px;
+  .container {
+    .row {
+      align-items: center;
+      flex-direction: column;
+      span {
+        color: $darkBlueClr;
+        font-weight: 700;
+        display: inline-block;
+        position: relative;
+        margin-bottom: 16px;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 45px;
+          height: 2px;
+          background: $darkBlueClr;
+          left: -60px;
+          bottom: 0;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+      .title {
+        font-size: 50px;
+        font-weight: 700;
+        margin-bottom: 66px;
+        line-height: 1.3;
+        color: $darkBlueClr;
+      }
+      .map {
+        width: 100%;
+        margin-bottom: 48px;
+        padding-bottom: 24px;
+        iframe {
+          width: 100%;
+          height: 480px;
+          border: 0;
+        }
+      }
+      h5 {
+        font-size: 27px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        color: $darkBlueClr;
+        text-align: left;
+        width: 100%;
+      }
+      .formContainer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .form {
+          flex: 0 0 67%;
+          textarea {
+            resize: none;
+            width: 100%;
+            margin-bottom: 30px;
+            border: 1px solid #e5e6e9;
+            padding: 6px 12px 6px 18px;
+            line-height: 1.5;
+            color: #495057;
+            font-size: 13px;
+
+            &:focus {
+              outline: 0;
+            }
+          }
+          .inputGroup {
+            display: flex;
+            justify-content: space-between;
+            input {
+              margin-bottom: 30px;
+              flex: 0 0 45%;
+              border: 1px solid #e5e6e9;
+              height: 48px;
+              color: #495057;
+              padding: 6px 12px 6px 18px;
+              font-size: 13px;
+              &:focus {
+                outline: 0;
+              }
+            }
+          }
+          input {
+            width: 100%;
+            margin-bottom: 30px;
+            padding: 6px 12px 6px 18px;
+            font-size: 13px;
+            height: 48px;
+            border: 1px solid #e5e6e9;
+            color: #495057;
+            &:focus {
+              outline: 0;
+            }
+          }
+          button {
+            cursor: pointer;
+            letter-spacing: 3px;
+            font-size: 14px;
+            background-color: $whiteClr;
+            color: $lightPinkClr;
+            margin-bottom: 30px;
+            margin-top: 16px;
+            border: 1px solid $lightPinkClr;
+            padding: 18px 44px;
+            transition: all 0.3s ease-out;
+
+            &:hover {
+              background-color: $lightPinkClr;
+              border: 1px solid $lightPinkClr;
+              color: $whiteClr;
+            }
+          }
+        }
+        .contactInfo {
+          flex: 0 0 25%;
+          .contactInfoContent {
+            display: flex;
+            margin-bottom: 25px;
+            i {
+              padding: 10px 0 0 5px;
+              color: #8f9195;
+              font-size: 27px;
+              margin-right: 20px;
+            }
+            div {
+              a {
+                font-size: 16px;
+                color: #2a2a2a;
+                font-weight: 500;
+                transition: all 0.4s ease-out;
+
+                &:hover {
+                  color: $lightPinkClr;
+                }
+              }
+              p {
+                margin-bottom: 15px;
+                line-height: 30px;
+                color: #8a8a8a;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .contact {
+    padding-top: 124px;
+  }
+}
+
+@media (max-width: 992px) {
+  .contact {
+    padding-top: 81.5px;
+    .container {
+      .row {
+        .title {
+          font-size: 45px;
+        }
+        .formContainer {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding-top: 61.5px;
+    .container {
+      .row {
+        .title {
+          font-size: 23px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    .row {
+      .map {
+        display: none;
+      }
+    }
+  }
+}
+
+/* ------------------------------- END CONTACT ------------------------------ */
