@@ -996,6 +996,9 @@ body {
 }
 
 @media (max-width: 1200px) {
+  .generating .container .row .title {
+    width: 100%;
+  }
   .generating .container .row .cardBox {
     -moz-column-gap: 15px;
          column-gap: 15px;
@@ -1655,12 +1658,14 @@ body {
 }
 .aboutHero .container .row .leftSide {
   flex: 0 0 48%;
+  animation-duration: 1s;
 }
 .aboutHero .container .row .leftSide img {
   width: 100%;
 }
 .aboutHero .container .row .rightSide {
   padding: 0 15px;
+  animation-duration: 1s;
   flex: 0 0 58%;
 }
 .aboutHero .container .row .rightSide .title {
@@ -1963,8 +1968,14 @@ body {
   }
 }
 @media (max-width: 576px) {
-  .container .row .map {
+  .contact .container .row .map {
     display: none;
+  }
+  .contact .container .row .formContainer .form .inputGroup {
+    flex-wrap: wrap;
+  }
+  .contact .container .row .formContainer .form .inputGroup input {
+    flex: 0 0 100%;
   }
 }
 /* ------------------------------- END CONTACT ------------------------------ */
@@ -2026,13 +2037,19 @@ body {
 }
 
 @media (max-width: 1200px) {
+  .servicesHero + .generating {
+    padding-top: 60px;
+    padding-bottom: 65px;
+  }
+}
+@media (max-width: 1200px) {
   .generating {
     padding-top: 60px;
     padding-bottom: 65px;
   }
 }
 @media (max-width: 768px) {
-  .generating {
+  .servicesHero + .generating {
     padding-top: 30px;
     padding-bottom: 35px;
   }

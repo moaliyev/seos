@@ -59,6 +59,14 @@
   padding-top: 160px;
   padding-bottom: 170px;
 }
+
+@media (max-width: 1200px) {
+  .servicesHero + .generating {
+    padding-top: 60px;
+    padding-bottom: 65px;
+  }
+}
+
 @media (max-width: 1200px) {
   .generating {
     padding-top: 60px;
@@ -67,7 +75,7 @@
 }
 
 @media (max-width: 768px) {
-  .generating {
+  .servicesHero + .generating {
     padding-top: 30px;
     padding-bottom: 35px;
   }

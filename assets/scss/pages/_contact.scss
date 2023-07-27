@@ -189,10 +189,22 @@
 }
 
 @media (max-width: 576px) {
-  .container {
-    .row {
-      .map {
-        display: none;
+  .contact {
+    .container {
+      .row {
+        .map {
+          display: none;
+        }
+        .formContainer {
+          .form {
+            .inputGroup {
+              flex-wrap: wrap;
+              input {
+                flex: 0 0 100%;
+              }
+            }
+          }
+        }
       }
     }
   }

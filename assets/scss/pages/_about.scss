@@ -11,12 +11,14 @@
       justify-content: center;
       .leftSide {
         flex: 0 0 48%;
+        animation-duration: 1s;
         img {
           width: 100%;
         }
       }
       .rightSide {
         padding: 0 15px;
+        animation-duration: 1s;
         flex: 0 0 58%;
         .title {
           font-size: 65px;

@@ -604,6 +604,9 @@
   .generating {
     .container {
       .row {
+        .title {
+          width: 100%;
+        }
         .cardBox {
           column-gap: 15px;
         }
